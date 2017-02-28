@@ -16,7 +16,8 @@ centroids<-read.csv("centroids.csv")
 closetoCentroid<-function(country){
   dataset<-occ_search(country = country, hasCoordinate = T,limit = 1000)
   
- distCentroid<- distm(dataset$data[,c(4,3)],centroids[centroids$country==country,c(3,2)],fun=distHaversine)[,1]
+ distCentroid<- distm(dataset$data[,c(4,3)],centroids[centroids$country==country,c(3,2)],fun=distHaversine)
+ distCentroid<-distCentroid[,!colSums(is.na(distCentroid))>0]
  
  dataset$data$distCentroid<-distCentroid
  
