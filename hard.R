@@ -1,6 +1,9 @@
 ############################ VAMSI KRISHNA#######################################
 ############Solution for "Biodiversity Data Cleaning" test#######################
 
+####Parameter country The 2-letter country code (as per ISO-3166-1) 
+####of the country in which the occurrence was recorded. See here http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 
+
 ##loading packages
 library(rgbif)
 library(geosphere)
@@ -17,8 +20,8 @@ closetoCentroid<-function(country){
  
  dataset$data$distCentroid<-distCentroid
  
- dataset$data[dataset$data$distCentroid<200000,]
+ dataset$data[dataset$data$distCentroid<200000,]## records which are 200,000m i.e 200km from the centroid of the country
  
 }
 
-closetoCentroid("IN")
+closetoCentroid("IN") #####ISO-3166-1
