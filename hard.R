@@ -1,8 +1,14 @@
+############################ VAMSI KRISHNA#######################################
+############Solution for "Biodiversity Data Cleaning" test#######################
+
+##loading packages
 library(rgbif)
 library(geosphere)
+
+##read centroids of countries data
 centroids<-read.csv("centroids.csv")
 
-country<-"IN"
+
 
 closetoCentroid<-function(country){
   dataset<-occ_search(country = country, hasCoordinate = T,limit = 1000)
