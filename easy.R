@@ -1,6 +1,8 @@
-#########################VAMSI KRISHNA###########################################
+############################ VAMSI KRISHNA#######################################
+############Solution for "Biodiversity Data Cleaning" test#######################
 
-########################LOAD DATA###############################################
+
+##LOAD DATA
 library(rgbif)
 library(mapr)
 library(ggmap)
@@ -11,7 +13,7 @@ Goldfinch<-occ_search(scientificName = "Spinus tristis")
 
 
 
-############################MAP DATA###########################################
+##MAP DATA
 map_ggplot(Panthera_tigris)
 map_ggmap(Goldfinch)
-?gbifmap(Panda$data)
+gbifmap(Panda$data)
