@@ -16,6 +16,5 @@ Medium:Write a R function to check dates of all the records downloaded from GBIF
     4. "day" variable not matching with corresponding "eventDate" variable of a record.
     
     
-    Easy:Use package mapr to plot the occurrence data on maps.
     
     
