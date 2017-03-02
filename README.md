@@ -9,7 +9,7 @@ Hard: Write a function to identify records very close to centroid of any country
 
 Medium:Write a R function to check dates of all the records downloaded from GBIF for a set of species and add a flag field indicating quality of the date field data.
 
-   Used 4 variables to establish the quality of Date Field -"year","month","day","eventDate".Tests to check Quality:-
+   Used 4 variables to establish the quality of Date Field -"year", "month", "day", "eventDate". Tests to check Quality:-
    
     1. NA values in any of the records.
     2. "year" variable not matching with corresponding "eventDate" variable of a record.
