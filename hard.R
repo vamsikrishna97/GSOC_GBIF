@@ -7,6 +7,8 @@
 ##loading packages
 library(rgbif)
 library(geosphere)
+library(ggplot2)
+library(ggmap)
 
 ##read centroids of countries data
 centroids<-read.csv("centroids.csv")
