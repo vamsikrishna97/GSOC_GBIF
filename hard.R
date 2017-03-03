@@ -16,12 +16,16 @@ centroids<-read.csv("centroids.csv")
 closetoCentroid<-function(country){
   dataset<-occ_search(country = country, hasCoordinate = T,limit = 1000)
   
- distCentroid<- distm(dataset$data[,c(4,3)],centroids[centroids$country==country,c(3,2)],fun=distHaversine)
- distCentroid<-distCentroid[,!colSums(is.na(distCentroid))>0]
+  distCentroid<- distm(dataset$data[,c(4,3)],centroids[centroids$country==country,c(3,2)],fun=distHaversine)
+  distCentroid<-distCentroid[,!colSums(is.na(distCentroid))>0]
+  
+  dataset$data$distCentroid<-distCentroid
+  
+  x<-dataset$data[dataset$data$distCentroid<200000,]## records which are 200,000m i.e 200km from the centroid of the country
+ print(x)
+ mapWorld <- borders("world", colour="gray50", fill="gray50") # create a layer of borders
+  ggplot() + mapWorld + geom_point(aes(x$decimalLongitude,x$decimalLatitude),color="blue", size=2)
  
- dataset$data$distCentroid<-distCentroid
- 
- dataset$data[dataset$data$distCentroid<200000,]## records which are 200,000m i.e 200km from the centroid of the country
  
 }
 
