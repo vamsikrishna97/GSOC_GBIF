@@ -24,7 +24,7 @@ closetoCentroid<-function(country){
   x<-dataset$data[dataset$data$distCentroid<200000,]## records which are 200,000m i.e 200km from the centroid of the country
  print(x)
  mapWorld <- borders("world", colour="gray50") # create a layer of borders
-  ggplot() + mapWorld + geom_point(aes(x$decimalLongitude,x$decimalLatitude),color="blue", size=2)
+  ggplot() + mapWorld + geom_point(aes(x$decimalLongitude,x$decimalLatitude,col=x$order))
  
  
 }
