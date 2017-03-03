@@ -17,5 +17,9 @@ Medium:Write a R function to check dates of all the records downloaded from GBIF
     4. "day" variable not matching with corresponding "eventDate" variable of a record.
     
     
-    
-    
+Records of India-800km radius from the centroid[limit=5000]
+![alt tag](https://raw.githubusercontent.com/vamsikrishna97/GSOC_GBIF/India_Hard.png) 
+
+
+Records of USA-800km radius from the centroid[limit=5000]
+![alt tag](https://raw.githubusercontent.com/vamsikrishna97/GSOC_GBIF/US_Hard.png)
